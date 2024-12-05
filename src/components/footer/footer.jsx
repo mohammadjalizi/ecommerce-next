@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
     Designed and developed by
-    <span> Ali Hassan </span>© 2024.
+    <span>  mohammadjalizi </span>© 2024.
   </footer>
   );
 }
