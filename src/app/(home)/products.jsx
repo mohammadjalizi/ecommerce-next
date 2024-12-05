@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image.js";
+import { arrData } from "./myproduct";
+
 
 // const arr = [
 //   { productImg: "./images/1.png" },
@@ -15,23 +17,23 @@ import Image from "next/image.js";
 //   { productImg: "./images/8.png" },
 // ];
 
-async function getData() {
-  // await new Promise(resolve => setTimeout(resolve, 3000))
+// async function getData() {
+//   // await new Promise(resolve => setTimeout(resolve, 3000))
 
-  const res = await fetch("http://localhost:4000/products", {
-    next: { revalidate: 0 },
-  });
+//   const res = await fetch("http://localhost:4000/products", {
+//     next: { revalidate: 0 },
+//   });
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    notFound();
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     notFound();
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 const Products = async () => {
-  const arrData = await getData();
+  // const arrData = await getData();
 
   return (
     <section className="products flex">

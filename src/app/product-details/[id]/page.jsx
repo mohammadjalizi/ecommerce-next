@@ -5,31 +5,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { notFound } from "next/navigation";
 import Image from "next/image.js";
+import { arrData } from "app/(home)/myproduct";
 
-async function getData(iddd) {
-  const res = await fetch(`http://localhost:4000/products/${iddd}`);
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+// async function getData(iddd) {
+//   const res = await fetch(`http://localhost:4000/products/${iddd}`);
+//   // The return value is *not* serialized
+//   // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    notFound();
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     notFound();
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
-export async function generateMetadata({ params }) {
-  const objData = await getData(params.id);
-  return {
-    title: objData.title,
-    description: objData.description,
-  };
-}
+// export async function generateMetadata({ params }) {
+//   const objData = await getData(params.id);
+//   return {
+//     title: objData.title,
+//     description: objData.description,
+//   };
+// }
 
 const Page = async ({ params }) => {
-  const objData = await getData(params.id);
-  console.log(objData);
+  // const objData = await getData(params.id);
+  const objData= arrData.find((item) => { 
+   return item.id==params.id
+
+   
+    })
+
 
   return (
     <div
