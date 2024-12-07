@@ -39,6 +39,7 @@ const Page = async ({ params }) => {
 
   return (
     <div
+    className="product-details"
       style={{
         height: "100vh",
         display: "grid",
