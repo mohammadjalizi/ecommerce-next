@@ -14,7 +14,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
  return (
     <html lang="en">
-      <body>
+      <body
+    
+         style={{
+           height: "100vh",
+           display: "grid",
+           gridTemplateRows: "auto 1fr auto",
+           alignItems: "center",
+         }}
+         className="text-center text-bg-dark auth-pages"
+       >
+  
 <Header/>
 
         {children}
