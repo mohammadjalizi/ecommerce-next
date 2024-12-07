@@ -7,6 +7,9 @@ export const metadata = {
 };
 const Page = () => {
   return (
+    <>
+  
+    <Header isRegister={true}/>
 <main className="px-3">
   <form style={{ textAlign: "left" }}>
     <div className="mb-4">
@@ -52,6 +55,7 @@ const Page = () => {
     </button>
   </form>
 </main>
+</>
 
   );
 };

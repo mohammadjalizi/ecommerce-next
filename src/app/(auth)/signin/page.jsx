@@ -1,3 +1,4 @@
+import Header from 'components/header/header';
 import React from 'react';
 export const metadata = {
   title: 'Signin page',
@@ -6,6 +7,9 @@ export const metadata = {
 }
 const Page = () => {
   return (
+      <>
+   
+    <Header isSignpage={true}/>
 <main className="px-3">
   <form style={{ textAlign: "left" }}>
     <div className="mb-4">
@@ -40,6 +44,7 @@ const Page = () => {
     </button>
   </form>
 </main>
+</>
 
   );
 }
