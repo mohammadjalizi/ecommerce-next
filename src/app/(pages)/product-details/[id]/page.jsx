@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { notFound } from "next/navigation";
 import Image from "next/image.js";
-import { arrData } from "app/(home)/myproduct";
+import { arrData } from "app/(pages)/(home)/myproduct";
+
 
 // async function getData(iddd) {
 //   const res = await fetch(`http://localhost:4000/products/${iddd}`);

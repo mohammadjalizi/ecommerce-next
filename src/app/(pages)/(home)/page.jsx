@@ -1,8 +1,8 @@
 // @ts-nocheck
 
 import { Suspense } from "react";
-import Footer from "../../components/footer/footer.jsx";
-import Header from "../../components/header/header.jsx";
+import Footer from "../../../components/footer/footer.jsx";
+import Header from "../../../components/header/header.jsx";
 import "./home.css";
 import Products from "./products.jsx";
 import Loading from "./loading.jsx";
