@@ -1,10 +1,19 @@
 "use client"
 
+import { useState } from "react"
+
 const RegisterForm = () => {
+
+const [name ,setName]=useState(null)
+const [email ,setEmail]=useState(null)
+const [password ,setpassword]=useState(null)
+
     const handelsubmit=((eo) => { 
 eo.preventDefault()
-console.log("hiii")
-
+console.log(name)
+console.log(email)
+console.log(password)
+console.log({name,email,password})
      })
   return (
     <div>
@@ -15,6 +24,10 @@ console.log("hiii")
         Username
       </label>
       <input
+      onChange={(eo)=>{
+setName(eo.target.value)
+
+      }}
       required
         type="text"
         className="form-control"
@@ -27,6 +40,10 @@ console.log("hiii")
         Email address
       </label>
       <input
+          onChange={(eo)=>{
+            setEmail(eo.target.value)
+            
+                  }}
       required
         type="email"
         className="form-control"
@@ -39,6 +56,10 @@ console.log("hiii")
         Password
       </label>
       <input
+          onChange={(eo)=>{
+            setpassword(eo.target.value)
+            
+                  }}
       required
         type="password"
         className="form-control"
