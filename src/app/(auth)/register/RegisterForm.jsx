@@ -23,6 +23,10 @@ const response = await fetch("api/register", {
 
 
   console.log(response)
+  if(response.ok){
+
+    console.log("niceeeeeee")
+  }
      }
   return (
     <div>
