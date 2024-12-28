@@ -14,6 +14,6 @@ export async function POST(request) {
 
 
 // 4- Go back to frontend
-return NextResponse.json({})
+return   NextResponse.json({ error: 'Registration failed' }, { status: 500 });  
 
 }
